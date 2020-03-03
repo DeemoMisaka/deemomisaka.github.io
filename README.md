@@ -1,2 +1,1 @@
-#deemomisaka.github.io
-创价猎奇合辑
+deemomisaka.github.io
