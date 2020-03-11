@@ -186,7 +186,6 @@ setInterval("update()",100);
 <hr />
 <p style="text-align: left"><font size="5px" color="red">2020.03.05 09:50 紧急情况！因我的磨情况未知，新站点关闭！</font>
 <p style="text-align: left"><font size="5px" color="red">2020.03.05 10:30 我的磨已恢复正常运营，新站点重新开启。</font>
-<p style="text-align: left">今天是此站在GitHub稳定运营的第<font size="6" color="red">⑨</font>天！
 <p style="text-align: left"><font size="6px"color="red">新站点（测试中）：</font><a href="https://erinmoons.wodemo.net/entry/529549"><font size="6px"color="red">我的磨+评论区（欢迎访问）</font></a>
 <p style="text-align: left"><font size="6px"color="red">悼念站（测试中）：</font><a href="https://deemomisaka.github.io/they_will_return.html"><font size="6px"color="red"><span title="高精创价厨请单击进入悼念站" class="view">哔哩哔哩高精大三角削除二周年祭日</font></h5></p></a>
 <p style="text-align: left">附赠友链①：<a href="https://pan.baidu.com/s/1rYs1gos-ChrJK6cHs6xOLQ">网盘链接（P0-P53）（提取码：z58h）</a>
@@ -195,6 +194,35 @@ setInterval("update()",100);
 <p style="text-align: left">附赠友链④：<a href="https://ubc2.github.io/links/menu.html">资料参闻馆</a>
 <p style="text-align: left">附赠友链⑤：<a href="https://xcbgj.github.io/">三角视频库</a>
 <p style="text-align: left"><a href="https://deemomisaka.github.io"><font size="6px" color="red">返回主站</font></a>
+<hr />
+<p style="text-align: center"><span id="momk"></span><span id="momk" style="color: #ff0000;"></span>
+<script type="text/javascript">
+function NewDate(str) {
+str = str.split('-');
+var date = new Date();
+date.setUTCFullYear(str[0], str[1] - 1, str[2]);
+date.setUTCHours(0, 0, 0, 0);
+return date;
+}
+function momxc() {
+var birthDay =NewDate("2020-3-3");
+var today=new Date();
+var timeold=today.getTime()-birthDay.getTime();
+var sectimeold=timeold/1000
+var secondsold=Math.floor(sectimeold);
+var msPerDay=24*60*60*1000; var e_daysold=timeold/msPerDay;
+var daysold=Math.floor(e_daysold);
+var e_hrsold=(daysold-e_daysold)*-24;
+var hrsold=Math.floor(e_hrsold);
+var e_minsold=(hrsold-e_hrsold)*-60;
+var minsold=Math.floor((hrsold-e_hrsold)*-60); var seconds=Math.floor((minsold-e_minsold)*-60).toString();
+document.getElementById("momk").innerHTML = "本站已安全稳定运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
+setTimeout(momxc, 1000);
+}momxc();
+</script>  <style>
+#momk{animation:change 10s infinite;font-weight:800; }
+@keyframes change{0%{color:#5cb85c;}25%{color:#556bd8;}50%{color:#e40707;}75%{color:#66e616;}100% {color:#67bd31;}}
+</style>
 <hr />
   <p style="text-align: center">20200303 此站目前仅供资源测试，日后会慢慢完善。欢迎分享，请勿举报。<br />
   </a>20200304 搬运此站网页上的所有内容至<a href="https://erinmoons.wodemo.net/">ErinMoons的Wodemo空间</a><br />
