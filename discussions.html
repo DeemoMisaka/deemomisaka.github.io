@@ -1,8 +1,8 @@
 <!DOCTYPE HTML>
    <html>
        <head>
-           <meta charset="gb2312">
-           <title>ÍøÕ¾ÁôÑÔ°å</title>
+           <meta charset="unicode">
+           <title>ç½‘ç«™ç•™è¨€æ¿</title>
            <style type="text/css">
            *{margin:0; padding:0;}
            body,input{font-size:14px; line-height:24px; color:#333; font-family:Microsoft yahei, Song, Arial, Helvetica, Tahoma, Geneva;}
@@ -38,20 +38,20 @@
              }
              function prom() {
 
-                 var name = prompt("ÇëÊäÈëÄúµÄÃû×Ö", "");
+                 var name = prompt("è¯·è¾“å…¥æ‚¨çš„åå­—", "");
                  named = name;
 
                  if (named)
 
                  {
 
-                     alert("»¶Ó­Äú£º" + name)
+                     alert("æ¬¢è¿æ‚¨ï¼š" + name)
                      document.getElementById("shangtian").style.display = "none";
                      document.getElementById("ritian").value = named;
 
                  }
                  else {
-                     document.getElementById("ritian").value = "ÄäÃû·¢ÑÔÕß";
+                     document.getElementById("ritian").value = "åŒ¿åå‘è¨€è€…";
                  }
 
              }
@@ -63,13 +63,13 @@
                       var data = document.querySelector("#post textarea");
                   if(data.value != "")
                   {
-                      var time = new Date().getTime() + Math.random() * 5;//getTimeÊÇDate¶ÔÏóÖĞµÄ·½·¨£¬×÷ÓÃÊÇ·µ»Ø 1970Äê01ÔÂ01ÈÕÖÁ½ñµÄºÁÃëÊı
+                      var time = new Date().getTime() + Math.random() * 5;//getTimeæ˜¯Dateå¯¹è±¡ä¸­çš„æ–¹æ³•ï¼Œä½œç”¨æ˜¯è¿”å› 1970å¹´01æœˆ01æ—¥è‡³ä»Šçš„æ¯«ç§’æ•°
                       if (named) {
-                          localStorage.setItem(time, data.value + "|" + named + "|" + this.getDateTime());//½«ºÁÃëÊı´æÈëKeyÖµÖĞ£¬¿ÉÒÔ½µµÍKeyÖµÖØ¸´ÂÊ
+                          localStorage.setItem(time, data.value + "|" + named + "|" + this.getDateTime());//å°†æ¯«ç§’æ•°å­˜å…¥Keyå€¼ä¸­ï¼Œå¯ä»¥é™ä½Keyå€¼é‡å¤ç‡
                       }
                       else
                       {
-                          localStorage.setItem(time, data.value + "|" + "ÄäÃû·¢ÑÔÕß" + "|" + this.getDateTime());//½«ºÁÃëÊı´æÈëKeyÖµÖĞ£¬¿ÉÒÔ½µµÍKeyÖµÖØ¸´ÂÊ
+                          localStorage.setItem(time, data.value + "|" + "åŒ¿åå‘è¨€è€…" + "|" + this.getDateTime());//å°†æ¯«ç§’æ•°å­˜å…¥Keyå€¼ä¸­ï¼Œå¯ä»¥é™ä½Keyå€¼é‡å¤ç‡
                       }
 
                       data.value = "";
@@ -77,7 +77,7 @@
                   }
                   else
                   {
-                      alert("ÇëÌîĞ´ÄúµÄÁôÑÔ£¡");
+                      alert("è¯·å¡«å†™æ‚¨çš„ç•™è¨€ï¼");
                  }
               },
               writeData:function()
@@ -88,7 +88,7 @@
                       data = localStorage.getItem(localStorage.key(i)).split("|");
  
                           //dataHtml += "<p><span class=\"msg\">" + data[0] + "</span><span class=\"datetime\">" + data[1] + "</span><span>" + data[2]+"</span></p>";
-                      dataHtml += "<span style=>" + data[1] + "<span style=\"float:right\">" + data[2] + "</span><p><span class=\"msg\">" + data[0] + "<input style=\"float:right;border:none;border-radius:5px;\" id=\"clearBt\" type=\"button\" onclick=\"delete1(" + localStorage.key(i) + ");\" value=\"É¾³ı\"/>" + "</span></p>";
+                      dataHtml += "<span style=>" + data[1] + "<span style=\"float:right\">" + data[2] + "</span><p><span class=\"msg\">" + data[0] + "<input style=\"float:right;border:none;border-radius:5px;\" id=\"clearBt\" type=\"button\" onclick=\"delete1(" + localStorage.key(i) + ");\" value=\"åˆ é™¤\"/>" + "</span></p>";
                   }
                   document.getElementById("comment").innerHTML = dataHtml;
               },
@@ -96,7 +96,7 @@
               {
                   if(localStorage.length > 0)
                   {
-                      if(window.confirm("Çå¿Õºó²»¿É»Ö¸´£¬ÊÇ·ñÈ·ÈÏÇå¿Õ£¿"))
+                      if(window.confirm("æ¸…ç©ºåä¸å¯æ¢å¤ï¼Œæ˜¯å¦ç¡®è®¤æ¸…ç©ºï¼Ÿ"))
                       {
                           localStorage.clear();
                           this.writeData();
@@ -104,10 +104,10 @@
                   }
                   else
                  {
-                     alert("Ã»ÓĞĞèÒªÇå¿ÕµÄÊı¾İ£¡");
+                     alert("æ²¡æœ‰éœ€è¦æ¸…ç©ºçš„æ•°æ®ï¼");
                   }
               },
-              getDateTime:function()//»ñÈ¡ÈÕÆÚÊ±¼ä£¬ÀıÈç 2012-03-08 12:58:58
+              getDateTime:function()//è·å–æ—¥æœŸæ—¶é—´ï¼Œä¾‹å¦‚ 2012-03-08 12:58:58
               {
                   var isZero = function(num)
                   {
@@ -138,19 +138,19 @@
       </head>
       
       <body>
-          <h1><font size="10px">ÍøÕ¾ÁôÑÔ°å</font></h1>
+          <h1><font size="10px">ç½‘ç«™ç•™è¨€æ¿</font></h1>
 
           <div id="content">
               <div id="post">
                   <div style="background:#3EADC5 ;height:30px;">
-                      êÇ³Æ£º<input type="submit" id="shangtian" name="Submit3" style="border:none; background-color:#3EADC5; color:white;" value="Ä¬ÈÏÓÃ»§µã»÷¸Ä±ä" onclick="prom()" />
+                      æ˜µç§°ï¼š<input type="submit" id="shangtian" name="Submit3" style="border:none; background-color:#3EADC5; color:white;" value="é»˜è®¤ç”¨æˆ·ç‚¹å‡»æ”¹å˜" onclick="prom()" />
                       <input type="text" id="ritian" style="border:none; background-color:#3EADC5; color:white;"   onclick="prom()"/>
                       <!--disabled="disabled"-->
                   </div>
                   <div>
                   <textarea class="transition"></textarea>
                       </div>
-                  <input id="postBt" type="button" style="border:none; background-color:#3EADC5; color:white;border-radius:5px; width:80px; height:30px;" value="·¢±íÁôÑÔ"/>
+                  <input id="postBt" type="button" style="border:none; background-color:#3EADC5; color:white;border-radius:5px; width:80px; height:30px;" value="å‘è¡¨ç•™è¨€"/>
              </div>
              <div id="comment"></div>
               </div>
