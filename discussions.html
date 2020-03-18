@@ -63,13 +63,13 @@
                       var data = document.querySelector("#post textarea");
                   if(data.value != "")
                   {
-                      var time = new Date().getTime() + Math.random() * 5;//getTime是Date对象中的方法，作用是返回 1970年01月01日至今的毫秒数
+                      var time = new Date().getTime() + Math.random() * 5;
                       if (named) {
-                          localStorage.setItem(time, data.value + "|" + named + "|" + this.getDateTime());//将毫秒数存入Key值中，可以降低Key值重复率
+                          localStorage.setItem(time, data.value + "|" + named + "|" + this.getDateTime());
                       }
                       else
                       {
-                          localStorage.setItem(time, data.value + "|" + "匿名发言者" + "|" + this.getDateTime());//将毫秒数存入Key值中，可以降低Key值重复率
+                          localStorage.setItem(time, data.value + "|" + "匿名发言者" + "|" + this.getDateTime());
                       }
 
                       data.value = "";
@@ -143,7 +143,7 @@
           <div id="content">
               <div id="post">
                   <div style="background:#3EADC5 ;height:30px;">
-                      昵称：<input type="submit" id="shangtian" name="Submit3" style="border:none; background-color:#3EADC5; color:white;" value="默认用户点击改变" onclick="prom()" />
+                      昵称：<input type="submit" id="shangtian" name="Submit3" style="border:none; background-color:#3EADC5; color:white;" value="请点击这里输入你的昵称（不署名昵称为“匿名发言者”）" onclick="prom()" />
                       <input type="text" id="ritian" style="border:none; background-color:#3EADC5; color:white;"   onclick="prom()"/>
                       <!--disabled="disabled"-->
                   </div>
