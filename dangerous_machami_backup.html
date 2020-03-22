@@ -1,0 +1,268 @@
+﻿<!DOCTYPE HTML>
+<html lang=en">
+<head>
+  <meta charset="ANSI">
+  <title>备份站</title>
+</head>
+  <body bgcolor="#87CEFA">
+  <h1 style="text-align: center"><font size="8px"color="black">备份站</font></h1>
+  <p style="text-align: center">此网站已被隐藏，请勿传播网址，否则我会再次关站</p>
+<hr />
+    <div style="margin:0 auto; text-align:center">
+	<div style="font-size:25px; color: blue;" id="date">
+		<span id="year">2017</span>-<span id="month">01</span>-<span id="day">01</span>
+	</div>
+ 
+	<div style="font-size:40px; color: black;" id="time">
+		<span id="h">12</span>:<span id="m">00</span>:<span id="s">00</span>
+	</div>
+</div>
+<script>
+ 
+var bfullscreen = false;
+function fullscreen() {
+	//document.documentElement.webkitRequestFullScreen();
+	//var docElm = document.documentElement;
+	//console.log(docElm)
+	if (!bfullscreen) {
+		if (document.requestFullscreen) { // w3c
+			document.requestFullscreen();
+		} else if (document.mozRequestFullScreen) { // FireFox
+			document.mozRequestFullScreen();
+		} else if (document.webkitRequestFullScreen) { // chrome
+			document.webkitRequestFullScreen();  
+		} else if (document.msRequestFullscreen) { // IE11
+			document.msRequestFullscreen();
+		}
+		bfullscreen = true;
+	} else {
+		if (document.exitFullscreen) {
+		    document.exitFullscreen();
+		} else if (document.mozCancelFullScreen) {
+		    document.mozCancelFullScreen();
+		} else if (document.webkitCancelFullScreen) {
+		    document.webkitCancelFullScreen();
+		} else if (document.msExitFullscreen) {
+		      document.msExitFullscreen();
+		}
+		bfullscreen = false;
+	}
+}
+function fontsizereset() {
+	var ed = document.getElementById("date");
+	var et = document.getElementById("time");
+	ed.style.fontSize = "48px";
+	et.style.fontSize = "160px";
+}
+function fontsizeup() {
+	var ed = document.getElementById("date");
+	var et = document.getElementById("time");
+	var vd = ed.style.fontSize;
+	var vt = et.style.fontSize;
+	vd = parseInt(vd.substring(0, vd.length - 2)) + 16;
+	vt = parseInt(vt.substring(0, vt.length - 2)) + 24;
+	if (vd > 240)
+		vd = 240;
+	if (vt > 360)
+		vt = 360;
+	ed.style.fontSize = vd + "px";
+	et.style.fontSize = vt + "px";
+}
+function fontsizedown() {
+	var ed = document.getElementById("date");
+	var et = document.getElementById("time");
+	var vd = ed.style.fontSize;
+	var vt = et.style.fontSize;
+	vd = parseInt(vd.substring(0, vd.length - 2)) - 20;
+	vt = parseInt(vt.substring(0, vt.length - 2)) - 20;
+	if (vd < 12)
+		vd = 12;
+	if (vt < 16)
+		vt = 16;
+	ed.style.fontSize = vd + "px";
+	et.style.fontSize = vt + "px";
+}
+ 
+// -------------------------------
+function updateDate(y, m, d) {
+	if (m < 10)
+		m = "0" + m;
+	if (d < 10)
+		d = "0" + d;
+	document.getElementById("year").innerHTML = y;
+	document.getElementById("month").innerHTML = m;
+	document.getElementById("day").innerHTML = d;
+}
+ 
+function updateTime(h, m, s, sss) {
+	if (h < 10)
+		h = "0" + h;
+	if (m < 10)
+		m = "0" + m;
+	if (s < 10)
+		s = "0" + s;
+	document.getElementById("h").innerHTML = h;
+	document.getElementById("m").innerHTML = m;
+	document.getElementById("s").innerHTML = s;
+	document.getElementById("sss").innerHTML = sss;
+}
+ 
+function update(){
+	var date = new Date();
+	updateDate(date.getFullYear(), date.getMonth() + 1, date.getDate());
+	updateTime(date.getHours(), date.getMinutes(), date.getSeconds(), parseInt(date.getMilliseconds() / 100));
+ 
+};
+setInterval("update()",100);
+ 
+</script>
+<hr />
+<p style="text-align: center"><a href="https://deemomisaka.github.io/discussions.html"><font size="6px">自嗨の评论区</font></a>
+<p style="text-align: center"><a href="https://jq.qq.com/?_wv=1027&k=5LxWJcx"><font size="5px"color="blue">加入资源群（群号：892731582）</font></a>
+<body>
+<p style="text-align: center"><font size="4px"color="black">注：视频整合站，大部分资源来自友链，各位尽量直接下载，以免给其他站长带来不必要的麻烦。</font><br />
+<hr />
+<p style="text-align: left">①<a href="http://www.bilibili.com/video/av32301372">B站打码补档</a>
+<p style="text-align: left">②<a href="https://github.com/DeemoMisaka/deemomisaka.github.io">ZIP打包下载地址</a>
+<p style="text-align: left">③<a href="https://i.youku.com/i/UMTE0MjU2Njg0">欧皇白莉莉=我只是打酱油的</a>
+<p style="text-align: left">④<a href="https://www.ixigua.com/home/78778092232072/">西瓜视频补档①</a>
+<p style="text-align: left">⑤<a href="https://www.ixigua.com/home/102510776968/">西瓜视频补档②</a>
+<hr />
+<p style="text-align: left"><font size="6px"color="black">迫真危险地带合集↓</font>
+<hr />
+<p>av23 - <a href="https://xcbgj.github.io/Videos/23.mp4">【慎入】被蓝蓝路的七变化洗脑后，兴致很高</a></p>
+<p>av107 - <a href="https://xcbgj.github.io/Videos/107.mp4">最终鬼畜二小姐.芙兰朵露</a></p>
+<p>av1756 - <a href="https://xcbgj.github.io/Videos/1756.mp4">【新日暮里 × Jubeat】Evan様</a></p>
+<p>av11425 - <a href="https://qmj0130.wodemo.net/entry/484155/20191013/b5a540a7701063dc13454a46b801c893/%E6%83%A0%E6%96%B9%E5%8D%B7%EF%BC%88av11425%EF%BC%89.mp4">【巨猎奇】SM666风...胆小慎入</a></p>
+<p>av88888 - <a href="https://xcbgj.github.io/Videos/88888.mp4">【東方頭破七分】不可視久本 ～ Airmoto of Frenzy</a></p>
+<p>av129520 - <a href="https://xcbgj.github.io/Videos/129520.mp4">sm666 so Happy</a></p>
+<p>av268364 - <a href="https://xcbgj.github.io/Videos/奈亚子268364.mp4">奈亚子 SO HAPPY</a></p>
+<p>av535903 - <a href="https://xcbgj.github.io/Videos/奈亚子W so happy.mp4">奈亚子W SO HAPPY</a></p>
+<p>av1310084 - <a href="https://xcbgj.github.io/Videos/奈亚子so happy (重制版).mp4">奈亚子 SO HAPPY(重制版)</a></p>
+<p>av423257 - <a href="https://xcbgj.github.io/Videos/423257.mp4">doll</a></p>
+<p>av882708 - <a href="https://xcbgj.github.io/Videos/882708.mp4">章鱼哥自杀①</a></p>
+<p>av954563 - <a href="https://xcbgj.github.io/Videos/954563.mp4">章鱼哥自杀②</a></p>
+<p>av1020212 - <a href="https://xcbgj.github.io/Videos/1020212.mp4">视听禁止</a></p>
+<p>av3245776 - <a href="https://xcbgj.github.io/Videos/猎奇警署.mp4">【升级版】猎奇警署</a></p>
+<hr />
+<p style="text-align: left"><font size="6px"color="black">五位数续集（大概）↓</font>
+<hr />
+<p>①<a href="https://xcbgj.github.io/Videos/危险的hrhr.mp4">危险的HRHR</a>（无马赛克）</p>
+<p>②<a href="https://xcbgj.github.io/Videos/？.mp4">章鱼哥自杀（静止画）</a>（youtu.be/dOxY4RIEOpA）</p>
+<p>③<a href="https://qmj0130.wodemo.net/entry/484155/20191013/531220394ef03c1f5069d047432a4b18/%E6%95%99%E4%B8%BB%E7%9A%84%E5%AE%A2%E4%B8%B2.mp4">教主的客串</a></p>
+<p>④<a href="https://qmj0130.wodemo.net/entry/484155/20191013/ef7581c1b0b64d82ef5a48919a7482aa/miku%E8%91%B1.mp4)">miku葱.mp4</a></p>
+<p>⑤<a href="https://qmj0130.wodemo.net/entry/484155/20191013/72517b2c34fdccd694a7f6af18395fb3/%E6%85%8E%E5%85%A5%E7%9A%84%E7%BB%AD%E9%9B%86.mp4">慎入の续集</a></p>
+<p>⑥<a href="https://qmj0130.wodemo.net/entry/484155/20191013/0d419c348601b095c13f6d99573f205d/%E4%B9%85%E6%9C%AC%E9%9B%85%E7%BE%8E%E5%85%88%E8%BF%9B%E5%9B%BD%E7%BB%AD%E9%9B%86.mp4)">死亡猎奇②</a></p>
+<p>⑦<a href="https://qmj0130.wodemo.net/entry/484155/20191013/b6b374381c74ae4d4fd54107f45a5620/%E5%B9%BB%E7%81%AF%E7%89%87%E5%BC%8F%E7%8C%8E%E5%A5%87.mp4">幻灯片猎奇</a></p>
+<p>⑧<a href="https://qmj0130.wodemo.net/entry/484155/20191013/b0c4986f33a3c589a38e58a38f98375e/%E6%9C%80%E7%BB%88%E5%85%B3%EF%BC%9F.mp4">最终关？</a></p>
+<p>⑨<a href="https://qmj0130.wodemo.net/entry/484155/20191013/cac72609ef2e4764b7d172077abc9b82/%E5%85%A8%E5%91%98%E7%8C%8E%E5%A5%87%EF%BC%9F.mp4">全员猎奇？</a></p>
+<p>⑩<a href="https://qmj0130.wodemo.net/entry/484155/20191013/010adf5453d8d77cafb1d3e644106cd1/%E5%85%A8%E5%91%98%E7%8C%8E%E5%A5%87%EF%BC%81.mp4">全员猎奇！</a></p>
+<p>⑪<a href="https://qmj0130.wodemo.net/entry/484155/20191013/dbc8871fce14d743d43d22e11b18363a/%E5%8C%96%E7%89%A9%E8%AF%AD%EF%BC%9F%E7%8C%8E%E5%A5%87%EF%BC%81.mp4)">化物语猎奇</a></p>
+<p>⑫<a href="https://qmj0130.wodemo.net/entry/484155/20191013/563d2a4038a2b1da9c43ce5c28236767/%E7%9C%9F%C2%B7%E4%B9%85%E6%9C%AC%E8%96%AF%E6%9D%A1.mp4">久本薯条</a></p>
+<p>⑬<a href="https://qmj0130.wodemo.net/entry/484155/20191013/83383fa3115aef6798ed58d2298ff91e/%E8%83%8C%E5%90%8E%E7%81%B5%E8%96%AF%E6%9D%A1.mp4">背后灵薯条</a></p>
+<p>⑭<a href="https://qmj0130.wodemo.net/entry/484155/20191013/c25e316568f50cc9b8973170ac950496/%E6%9F%B4%E7%94%B0%E7%9A%84%E8%BF%9B%E5%8C%96.mp4">柴田的进化</a></p><hr />
+<p style="text-align: left"><font size="6px"color="black">五位数原视频（共8P）</font>
+<hr />
+<p style="text-align: left">P1 <a href="https://xcbgj.github.io/Videos/p1.mp4">死亡猎奇</a>
+<p style="text-align: left">P2 <a href="https://xcbgj.github.io/Videos/p2.mp4">薯饼猎奇</a>
+<p style="text-align: left">P3 <a href="https://xcbgj.github.io/Videos/p3.mp4">全员猎奇</a>
+<p style="text-align: left">P4 <a href="https://xcbgj.github.io/Videos/p4.mp4">惊悚猎奇</a>
+<p style="text-align: left">P5 <a href="https://xcbgj.github.io/Videos/p5.mp4">精神猎奇</a>
+<p style="text-align: left">P6 <a href="https://xcbgj.github.io/Videos/p6.mp4">益虫观察</a>
+<p style="text-align: left">P7 <a href="https://xcbgj.github.io/Videos/p7.mp4">阴影猎奇</a>
+<p style="text-align: left">P8 <a href="https://xcbgj.github.io/Videos/p8.mp4">终极猎奇</a>
+<p style="text-align: left">全弹幕下载（P1-P8）：<a href="https://www.lanzous.com/ia1m13c">P1-P8全弹幕.7Z（蓝奏云）</a>
+<p style="text-align: left">云视频源（7Z）：<a href="https://www.lanzous.com/i9yi9hc">P1-P8.7Z（蓝奏云）</a>
+<hr />
+<p style="text-align: left"><font size="6px"color="black">武器系列↓</font>
+<hr />
+<p>①<a href="https://xcbgj.github.io/Videos/武器A.mp4">武器A</a></p>
+<p>②<a href="https://xcbgj.github.io/Videos/武器B.mp4">武器B</a></p>
+<p>③<a href="https://xcbgj.github.io/Videos/武器C.MP4">武器C</a></p>
+<p>④<a href="https://xcbgj.github.io/Videos/武器D.MP4">武器D</a></p>
+<p>⑤<a href="https://xcbgj.github.io/Videos/武器E.MP4">武器E</a></p>
+<p>⑥<a href="https://xcbgj.github.io/Videos/武器F.MP4">武器F</a></p>
+<p>⑦<a href="https://pan.baidu.com/s/17f8JT6MUI3Dx8_vOxH9o3g">武器G</a>（提取码：3uo1)</p>
+<p>⑧<a href="https://xcbgj.github.io/Videos/武器H.MP4">武器H</a></p>
+<p>⑨<a href="https://xcbgj.github.io/Videos/武器I.MP4">武器I</a></p>
+<p>⑩<a href="https://xcbgj.github.io/Videos/武器J.MP4">武器J</a></p>
+<p>⑪<a href="https://xcbgj.github.io/Videos/武器K.MP4">武器K</a></p>
+<p>⑫武器L  
+<a href="https://xcbgj.github.io/Videos/武器L1p.MP4">P1</a>
+<a href="https://xcbgj.github.io/Videos/武器L2p.MP4">P2</a></p>
+<p>⑬<a href="https://pan.baidu.com/s/19nSQSrc_RhjqN6ZO0-Kj3w">武器M</a>（提取码：hdyp)</p>
+<hr />
+<p style="text-align: center"><font size="10px"color="black"><strong>资料参闻馆の240P低画质合集↓</strong></font>
+<hr />
+<p style="text-align: left"><font size="6px"color="black">创价学会猎奇合辑（P1 - P8）↓</font>
+<hr />
+  <p style="text-align: left">P1 <a href="https://ubc2.github.io/vid/10492/01.mp4">死亡猎奇</a></p>
+  <p style="text-align: left">P2 <a href="https://ubc2.github.io/vid/10492/02.mp4">薯饼猎奇 (第一集)</a> <a href="https://ubc2.github.io/vid/10492/02-1.mp4">(第二集)</a></p>
+  <p style="text-align: left">P3 <a href="https://ubc2.github.io/vid/10492/03.mp4">全员猎奇 (第一集)</a> <a href="https://ubc2.github.io/vid/10492/03-1.mp4">(第二集)</a></p>
+  <p style="text-align: left">P4 <a href="https://ubc2.github.io/vid/10492/04.mp4">惊悚猎奇</a></p>
+  <p style="text-align: left">P5 <a href="https://ubc2.github.io/vid/10492/05.mp4">精神猎奇 (第一集)</a> <a href="https://ubc2.github.io/vid/10492/05-1.mp4">(第二集)</a></p>
+  <p style="text-align: left">P6 <a href="https://ubc2.github.io/vid/10492/06.mp4">益虫观察 (第一集)</a> <a href="https://ubc2.github.io/vid/10492/06-1.mp4">(第二集)</a></p>
+  <p style="text-align: left">P7 <a href="https://ubc2.github.io/vid/10492/07.mp4">喷血猎奇</a></p>
+  <p style="text-align: left">P8 <a href="https://ubc2.github.io/vid/10492/08.mp4">终极猎奇</a></p>
+<hr />
+<p style="text-align: left"><font size="6px"color="black">优秀连接作↓</font></p>
+<hr />
+  <p style="text-align: left">①<a href="https://ubc2.github.io/vid/10492/Others/AIRMT.mp4">不可视久本 ～ Airmoto of Frenzy</a></p>
+  <p style="text-align: left">②<a href="https://ubc2.github.io/vid/10492/Others/DGRMT.mp4">危险的久本</a></p>
+  <p style="text-align: left">③<a href="https://ubc2.github.io/vid/10492/Others/WPA.mp4">武器A</a></p>
+<hr />
+<p style="text-align: left"><font size="6px"color="black">猎奇视野作↓</font></p>
+<hr />
+  <p style="text-align: left">①<a href="https://ubc2.github.io/vid/10492/Others/SM6.mp4">【巨猎奇】SM666风...胆小慎入</a></p>
+  <p style="text-align: left">②<a href="https://ubc2.github.io/vid/10492/Others/INTENPHO.mp4">密集式猎奇</a></p>
+  <p style="text-align: left">③<a href="https://ubc2.github.io/vid/10492/Others/BRAWASH.mp4">洗脑式猎奇</a></p>
+<hr />
+<p style="text-align: left"><font size="6px"color="black">意义元素作↓</font></p>
+<hr />
+  <p style="text-align: left">①<a href="https://ubc2.github.io/vid/10492/Others/FRCFRIES.mp4">背后灵薯条</a></p>
+  <p style="text-align: left">②<a href="https://ubc2.github.io/vid/10492/Others/REDBRUSH.mp4">刷牙式猎奇</a></p>
+  <p style="text-align: left">③<a href="https://ubc2.github.io/vid/10492/Others/SXMOTOCT.mp4">鉴赏式猎奇</a></p>
+<hr />
+<p style="text-align: left"><font size="6px"color="black">其余猎奇作↓</font></p>
+<hr />
+  <p style="text-align: left">①<a href="https://ubc2.github.io/vid/10492/Others/RZ_0721.mp4">RZ0721</a></p>
+  <p style="text-align: left">②<a href="https://ubc2.github.io/vid/10492/Others/MIKUONION.mp4">MIKU葱</a></p>
+  <p style="text-align: left">③<a href="https://ubc2.github.io/vid/10492/Others/STORY.mp4">化物语猎奇</a></p>
+  <p style="text-align: left">④<a href="https://ubc2.github.io/vid/10492/Others/M.mp4">教主の客串</a></p>
+  <p style="text-align: left">⑤<a href="https://ubc2.github.io/vid/10492/Others/ASTYLE.mp4">牛の久本虫</a></p>
+<hr />
+<p style="text-align: left"><font size="6px"color="black">迫真危险地带合辑↓</font>
+<hr />
+<p style="text-align: left">av23 <a href="https://ubc2.github.io/vid/archive/00000023.mp4">被蓝蓝路的七变化洗脑后，兴致很高</a>
+<p style="text-align: left">av106 <a href="https://ubc2.github.io/vid/archive/00000106.mp4">最终鬼畜蓝蓝路</a>
+<p style="text-align: left">av107 <a href="https://ubc2.github.io/vid/archive/00000107.mp4">最终鬼畜二小姐 </a>
+<p style="text-align: left">av508 <a href="https://ubc2.github.io/vid/archive/00000508.mp4">【V家】蓝蓝路引发的异变</a>
+<p style="text-align: left">av41630 <a href="https://ubc2.github.io/vid/archive/00041630.mp4">琪露诺疾行 </a>
+<p style="text-align: left">av10429 <a href="https://ubc2.github.io/vid/archive/00010429.mp4">葛平起源</a>
+<p style="text-align: left">av25674 <a href="https://ubc2.github.io/vid/archive/00025674.mp4">琪露诺的完美瞎眼教室</a>
+<p style="text-align: left">av53065 <a href="https://ubc2.github.io/vid/archive/00053065.mp4">Happy sex!!!!</a>
+<p style="text-align: left">av77042 <a href="https://ubc2.github.io/vid/archive/00077042.mp4">世界の眼睛 </a>
+<p style="text-align: left">av88885 <a href="https://ubc2.github.io/vid/archive/00088885.mp4">カルトマンの妖怪熟女</a>
+<p style="text-align: left">av88888 <a href="https://ubc2.github.io/vid/10492/Others/AIRMT.mp4">不可視久本</a>
+<p style="text-align: left">av123688 <a href="https://ubc2.github.io/vid/archive/00123688.mp4">东方喜洋洋</a>
+<p style="text-align: left">av129073 <a href="https://ubc2.github.io/vid/archive/00129073.mp4">旅立ちの日に</a>
+<p style="text-align: left">av129520 <a href="https://ubc2.github.io/vid/archive/00129520.mp4">sm666 so Happy</a>
+<p style="text-align: left">av170001 <a href="https://ubc2.github.io/vid/archive/00170001.mp4">保加利亚妖王HOP</a>
+<p style="text-align: left">av423257 <a href="https://ubc2.github.io/vid/archive/00423257.mp4">Doll</a>
+<p style="text-align: left">av459582 <a href="https://ubc2.github.io/vid/archive/00459582.mp4">无题</a>
+<p style="text-align: left">av882708 <a href="https://ubc2.github.io/vid/archive/00882708.mp4">章鱼哥自杀</a>
+<p style="text-align: left">av1216934 <a href="https://ubc2.github.io/vid/archive/01216934.mp4">紫苑镇死亡音乐高质立体声</a>
+<p style="text-align: left">av1345966 <a href="https://ubc2.github.io/vid/archive/01345966.mp4">蓝蓝路广告恶搞版</a>
+<p style="text-align: left">av10198539 <a href="https://ubc2.github.io/vid/archive/10198539.mp4">香蕉君热舞</a>
+<p style="text-align: left">av11009508 <a href="https://ubc2.github.io/vid/archive/11009508.mp4">蕉忍♂疾风传</a>
+<hr />
+<p style="text-align: left">友链①：<a href="https://pan.baidu.com/s/1rYs1gos-ChrJK6cHs6xOLQ">网盘链接（P0-P53）（提取码：z58h）</a>
+<p style="text-align: left">友链②：<a href="https://2786127571.wodemo.net/lieqi.htm">猎奇合辑（已关站）</a>
+<p style="text-align: left">友链③：<a href="https://qmj0130.wodemo.net/chuangjia">高精避难所</a>
+<p style="text-align: left">友链④：<a href="https://ubc2.github.io/links/menu.html">资料参闻馆</a>
+<p style="text-align: left">友链⑤：<a href="https://xcbgj.github.io/">三角视频库</a>
+<p style="text-align: left"><a href="https://deemomisaka.github.io"><font size="6px" color="red">返回主站</font></a>
+<hr />
+<p style="text-align: center">DeemoMisaka ©2017-2020 All Rights Deserved.<br />
+</body>
+</html>
