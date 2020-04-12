@@ -1,0 +1,186 @@
+﻿<!DOCTYPE HTML>
+<html lang=en">
+<head>
+  <meta charset="unicode">
+  <title>TouHou Project</title>
+  <link rel="icon" href="https://deemomisaka.github.io/touhou/touhou.ico" type="image/x-icon">
+</head>
+  <body bgcolor="#87CEFA">
+<h1 style="text-align: center"><font size="10px"color="black">東方PROJECT</font></h1>
+<p style="text-align: center">以GitHub为基础搭建的東方PROJECT资源站</p>
+<hr />
+<div style="margin:0 auto; text-align:center">
+	<div style="font-size:25px; color: blue;" id="date">
+		<span id="year">2017</span>-<span id="month">01</span>-<span id="day">01</span>
+	</div>
+ 
+	<div style="font-size:40px; color: black;" id="time">
+		<span id="h">12</span>:<span id="m">00</span>:<span id="s">00</span>
+	</div>
+</div>
+<script>
+ 
+var bfullscreen = false;
+function fullscreen() {
+	//document.documentElement.webkitRequestFullScreen();
+	//var docElm = document.documentElement;
+	//console.log(docElm)
+	if (!bfullscreen) {
+		if (document.requestFullscreen) { // w3c
+			document.requestFullscreen();
+		} else if (document.mozRequestFullScreen) { // FireFox
+			document.mozRequestFullScreen();
+		} else if (document.webkitRequestFullScreen) { // chrome
+			document.webkitRequestFullScreen();  
+		} else if (document.msRequestFullscreen) { // IE11
+			document.msRequestFullscreen();
+		}
+		bfullscreen = true;
+	} else {
+		if (document.exitFullscreen) {
+		    document.exitFullscreen();
+		} else if (document.mozCancelFullScreen) {
+		    document.mozCancelFullScreen();
+		} else if (document.webkitCancelFullScreen) {
+		    document.webkitCancelFullScreen();
+		} else if (document.msExitFullscreen) {
+		      document.msExitFullscreen();
+		}
+		bfullscreen = false;
+	}
+}
+function fontsizereset() {
+	var ed = document.getElementById("date");
+	var et = document.getElementById("time");
+	ed.style.fontSize = "48px";
+	et.style.fontSize = "160px";
+}
+function fontsizeup() {
+	var ed = document.getElementById("date");
+	var et = document.getElementById("time");
+	var vd = ed.style.fontSize;
+	var vt = et.style.fontSize;
+	vd = parseInt(vd.substring(0, vd.length - 2)) + 16;
+	vt = parseInt(vt.substring(0, vt.length - 2)) + 24;
+	if (vd > 240)
+		vd = 240;
+	if (vt > 360)
+		vt = 360;
+	ed.style.fontSize = vd + "px";
+	et.style.fontSize = vt + "px";
+}
+function fontsizedown() {
+	var ed = document.getElementById("date");
+	var et = document.getElementById("time");
+	var vd = ed.style.fontSize;
+	var vt = et.style.fontSize;
+	vd = parseInt(vd.substring(0, vd.length - 2)) - 20;
+	vt = parseInt(vt.substring(0, vt.length - 2)) - 20;
+	if (vd < 12)
+		vd = 12;
+	if (vt < 16)
+		vt = 16;
+	ed.style.fontSize = vd + "px";
+	et.style.fontSize = vt + "px";
+}
+ 
+// -------------------------------
+function updateDate(y, m, d) {
+	if (m < 10)
+		m = "0" + m;
+	if (d < 10)
+		d = "0" + d;
+	document.getElementById("year").innerHTML = y;
+	document.getElementById("month").innerHTML = m;
+	document.getElementById("day").innerHTML = d;
+}
+ 
+function updateTime(h, m, s, sss) {
+	if (h < 10)
+		h = "0" + h;
+	if (m < 10)
+		m = "0" + m;
+	if (s < 10)
+		s = "0" + s;
+	document.getElementById("h").innerHTML = h;
+	document.getElementById("m").innerHTML = m;
+	document.getElementById("s").innerHTML = s;
+	document.getElementById("sss").innerHTML = sss;
+}
+ 
+function update(){
+	var date = new Date();
+	updateDate(date.getFullYear(), date.getMonth() + 1, date.getDate());
+	updateTime(date.getHours(), date.getMinutes(), date.getSeconds(), parseInt(date.getMilliseconds() / 100));
+ 
+};
+setInterval("update()",100);
+ 
+</script>
+<hr />
+<p style="text-align: center"><a href="https://deemomisaka.github.io/discussions.html"><font size="6px">网站留言板</font></a>
+<p style="text-align: center"><a href="https://www.bilibili.com/video/av94012673/"><font size="5px"color="blue"><span title="求求宁点一下吧" class="view">今日视频推广</span></font></a>
+<p style="text-align: center"><a href="https://jq.qq.com/?_wv=1027&k=5LxWJcx"><font size="5px"color="blue"><span title="点击进群拿资源" class="view">加入资源群</span>（群号：892731582）</font></a>
+<hr />
+<p style="text-align: left"><font size="6px"color="black">无损音乐资源（CD/游戏提取）↓</font></a>
+<hr />
+<p style="text-align: left"><font size="5px"color="black">TH06  </font><a href="https://www.lanzous.com/b00ne5ouh"><font size="5px">东方红魔乡（提取:3tfs）</font></a>
+<p style="text-align: left"><font size="5px"color="black">TH07  </font><a href="https://www.lanzous.com/b00ne5owj"><font size="5px">东方妖妖梦（提取:gl7t）</font></a>
+<p style="text-align: left"><font size="5px"color="black">TH08  </font><a href="https://www.lanzous.com/b00ne5oxa"><font size="5px">东方永夜抄（提取:6y87）</font></a>
+<p style="text-align: left"><font size="5px"color="black">TH10  </font><a href="https://www.lanzous.com/b00ne5ozc"><font size="5px">东方风神录（提取:fgiw）</font></a>
+<p style="text-align: left"><font size="5px"color="black">TH11  </font><a href="https://www.lanzous.com/b00ne5p0d"><font size="5px">东方地灵殿（提取:473v）</font></a>
+<p style="text-align: left"><font size="5px"color="black">TH12  </font><a href="https://www.lanzous.com/b00ne5p1e"><font size="5px">东方星莲船（提取:caxw）</font></a>
+<hr />
+<p style="text-align: left"><font size="6px"color="black">正作精简版（部分汉化）↓</font></a>
+<hr />
+<p style="text-align: left"><font size="5px"color="black">开挂→</font><a href="https://www.lanzous.com/ia4ym2h"><font size="5px">东方符卡练习器</font></a>
+<p style="text-align: left"><font size="5px"color="black">TH01-05  </font><a href="https://www.lanzous.com/ia4ympa"><font size="5px">东方灵异传 - 怪绮谈</font></a>
+<p style="text-align: left"><font size="5px"color="black">TH06  </font><a href="https://www.lanzous.com/ia4zdpc"><font size="5px">东方红魔乡（英文版）</font></a>
+<p style="text-align: left"><font size="5px"color="black">TH07  </font><a href="https://www.lanzous.com/ia4yfcf"><font size="5px">东方妖妖梦</font></a>
+<p style="text-align: left"><font size="5px"color="black">TH08  </font><a href="https://www.lanzous.com/ia4yfsb"><font size="5px">东方永夜抄</font></a>
+<p style="text-align: left"><font size="5px"color="black">TH09  </font><a href="https://www.lanzous.com/ia4ygdc"><font size="5px">东方花映塚（PART 1）</font></a>
+<p style="text-align: left"><font size="5px"color="black">TH09  </font><a href="https://www.lanzous.com/ia4ygxc"><font size="5px">东方花映塚（PART 2）</font></a>
+<p style="text-align: left"><font size="5px"color="black">TH10  </font><a href="https://www.lanzous.com/ia4z8gd"><font size="5px">东方风神录</font></a>
+<p style="text-align: left"><font size="5px"color="black">TH11  </font><a href="https://www.lanzous.com/ia4yiwd"><font size="5px">东方地灵殿</font></a>
+<p style="text-align: left"><font size="5px"color="black">TH12  </font><a href="https://www.lanzous.com/ia4yjeb"><font size="5px">东方星莲船</font></a>
+<p style="text-align: left"><font size="5px"color="black">TH12.5  </font><a href="https://www.lanzous.com/ia4z8re"><font size="5px">东方文花帖DS</font></a>
+<p style="text-align: left"><font size="5px"color="black">TH12.8  </font><a href="https://www.lanzous.com/ia4z8wj"><font size="5px">妖精大战争</font></a>
+<p style="text-align: left"><font size="5px"color="black">TH13  </font><a href="https://www.lanzous.com/ia4yk1e"><font size="5px">东方神灵庙</font></a>
+<p style="text-align: left"><font size="5px"color="black">TH14  </font><a href="https://www.lanzous.com/iaeowrc"><font size="5px">东方辉针城（PART 1）</font></a>
+<p style="text-align: left"><font size="5px"color="black">TH14  </font><a href="https://www.lanzous.com/iaeow6b"><font size="5px">东方辉针城（PART 2）</font></a>
+<p style="text-align: left"><font size="5px"color="black">TH15  </font><a href="https://www.lanzous.com/ia4yiab"><font size="5px">东方绀珠传</font></a>
+<hr />
+<p style="text-align: center"><a href="https://deemomisaka.github.io"><font size="6px" color="red">返回主站</font></a>
+<hr />
+<p style="text-align: center"><span id="momk"></span><span id="momk" style="color: #ff0000;"></span>
+<script type="text/javascript">
+function NewDate(str) {
+str = str.split('-');
+var date = new Date();
+date.setUTCFullYear(str[0], str[1] - 1, str[2]);
+date.setUTCHours(0, 0, 0, 0);
+return date;
+}
+function momxc() {
+var birthDay =NewDate("2020-3-18");
+var today=new Date();
+var timeold=today.getTime()-birthDay.getTime();
+var sectimeold=timeold/1000
+var secondsold=Math.floor(sectimeold);
+var msPerDay=24*60*60*1000; var e_daysold=timeold/msPerDay;
+var daysold=Math.floor(e_daysold);
+var e_hrsold=(daysold-e_daysold)*-24;
+var hrsold=Math.floor(e_hrsold);
+var e_minsold=(hrsold-e_hrsold)*-60;
+var minsold=Math.floor((hrsold-e_hrsold)*-60); var seconds=Math.floor((minsold-e_minsold)*-60).toString();
+document.getElementById("momk").innerHTML = "本站已安全稳定运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
+setTimeout(momxc, 1000);
+}momxc();
+</script>  <style>
+#momk{animation:change 10s infinite;font-weight:600; }
+@keyframes change{0% {color:#FFFFFF;}25% {color:#000000;}50% {color:#FFFFFF;}75% {color:#000000;}100% {color:#FFFFFF;}}
+</style>
+<hr />
+<p style="text-align: center"><font size="4px"color="black">DeemoMisaka ©2017-2020 All Rights Deserved.</font></a>
+</body>
+</html>

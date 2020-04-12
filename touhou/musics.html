@@ -1,0 +1,221 @@
+﻿<!DOCTYPE HTML>
+<html lang=en">
+<head>
+  <meta charset="ANSI">
+  <title>幻想音乐馆</title>
+  <link rel="icon" href="https://deemomisaka.github.io/touhou/touhou.ico" type="image/x-icon">
+<script type="text/javascript">
+    //<!CDATA[
+        var bodyBgs = [];
+        bodyBgs[0] = "http://i2.tiimg.com/713450/07e4eb01dec8305e.jpg";
+        bodyBgs[1] = "http://i2.tiimg.com/713450/804713586befcf64.jpg";
+        bodyBgs[2] = "http://i1.fuimg.com/713450/a06480d2c00c49cd.jpg";
+        bodyBgs[3] = "http://i2.tiimg.com/713450/607a3b776435954c.jpg";
+        bodyBgs[4] = "http://i1.fuimg.com/713450/f8718c954a4ffb0e.jpg";
+        bodyBgs[5] = "http://i1.fuimg.com/713450/ffb62318866f03f9.jpg";
+        bodyBgs[6] = "http://i1.fuimg.com/713450/bbafe174a3cb830f.png";
+         var randomBgIndex = Math.round( Math.random() * 6 );
+        document.write('<style>body{background:url(' + bodyBgs[randomBgIndex] + ');background-position: center;background-attachment: fixed;background-size:contain;background-repeat: no-repeat;">}</style>');
+    //]]>
+</script>
+</head>
+<body>
+<center><table style="width: 450.0px;border-width: 2px;border-style: solid;border-color: #000000;background-color:rgba(135,206,250,0.65)"><td align="center" valign="top">
+<p style="text-align: center"><strong><font size="10px">幻想音乐馆</font></strong></p></table></center>
+<br/><center><table style="width: 450.0px;border-width: 2px;border-style: solid;border-color: #000000;background-color:rgba(135,206,250,0.65)"><td align="center" valign="top">
+<p style="text-align: center">东方PROJECT音乐集合</p></table></center>
+<br/><center><table style="width: 450.0px;border-width: 2px;border-style: solid;border-color: #000000;background-color:rgba(135,206,250,0.65)"><td align="center" valign="top">
+<p style="text-align: center">320K/VBR压制（<a href="http://i.xiaoniangao.cn/">小年糕有声影集</a>+<a href="https://thwiki.cc/">THBWiki</a>提供外链支持）</p></table></center>
+<br/><center><table style="width: 450.0px;border-width: 2px;border-style: solid;border-color: #000000;background-color:rgba(135,206,250,0.65)"><td align="center" valign="top">
+<div style="margin:0 auto; text-align:center">
+	<div style="font-size:25px; color: blue;" id="date">
+		<span id="year">2017</span>-<span id="month">01</span>-<span id="day">01</span>
+	</div>
+ 
+	<div style="font-size:40px; color: black;" id="time">
+		<span id="h">12</span>:<span id="m">00</span>:<span id="s">00</span>
+	</div>
+</div>
+<script>
+
+var bfullscreen = false;
+function fullscreen() {
+	//document.documentElement.webkitRequestFullScreen();
+	//var docElm = document.documentElement;
+	//console.log(docElm)
+	if (!bfullscreen) {
+		if (document.requestFullscreen) { // w3c
+			document.requestFullscreen();
+		} else if (document.mozRequestFullScreen) { // FireFox
+			document.mozRequestFullScreen();
+		} else if (document.webkitRequestFullScreen) { // chrome
+			document.webkitRequestFullScreen();  
+		} else if (document.msRequestFullscreen) { // IE11
+			document.msRequestFullscreen();
+		}
+		bfullscreen = true;
+	} else {
+		if (document.exitFullscreen) {
+		    document.exitFullscreen();
+		} else if (document.mozCancelFullScreen) {
+		    document.mozCancelFullScreen();
+		} else if (document.webkitCancelFullScreen) {
+		    document.webkitCancelFullScreen();
+		} else if (document.msExitFullscreen) {
+		      document.msExitFullscreen();
+		}
+		bfullscreen = false;
+	}
+}
+function fontsizereset() {
+	var ed = document.getElementById("date");
+	var et = document.getElementById("time");
+	ed.style.fontSize = "48px";
+	et.style.fontSize = "160px";
+}
+function fontsizeup() {
+	var ed = document.getElementById("date");
+	var et = document.getElementById("time");
+	var vd = ed.style.fontSize;
+	var vt = et.style.fontSize;
+	vd = parseInt(vd.substring(0, vd.length - 2)) + 16;
+	vt = parseInt(vt.substring(0, vt.length - 2)) + 24;
+	if (vd > 240)
+		vd = 240;
+	if (vt > 360)
+		vt = 360;
+	ed.style.fontSize = vd + "px";
+	et.style.fontSize = vt + "px";
+}
+function fontsizedown() {
+	var ed = document.getElementById("date");
+	var et = document.getElementById("time");
+	var vd = ed.style.fontSize;
+	var vt = et.style.fontSize;
+	vd = parseInt(vd.substring(0, vd.length - 2)) - 20;
+	vt = parseInt(vt.substring(0, vt.length - 2)) - 20;
+	if (vd < 12)
+		vd = 12;
+	if (vt < 16)
+		vt = 16;
+	ed.style.fontSize = vd + "px";
+	et.style.fontSize = vt + "px";
+}
+ 
+// -------------------------------
+function updateDate(y, m, d) {
+	if (m < 10)
+		m = "0" + m;
+	if (d < 10)
+		d = "0" + d;
+	document.getElementById("year").innerHTML = y;
+	document.getElementById("month").innerHTML = m;
+	document.getElementById("day").innerHTML = d;
+}
+ 
+function updateTime(h, m, s, sss) {
+	if (h < 10)
+		h = "0" + h;
+	if (m < 10)
+		m = "0" + m;
+	if (s < 10)
+		s = "0" + s;
+	document.getElementById("h").innerHTML = h;
+	document.getElementById("m").innerHTML = m;
+	document.getElementById("s").innerHTML = s;
+	document.getElementById("sss").innerHTML = sss;
+}
+ 
+function update(){
+	var date = new Date();
+	updateDate(date.getFullYear(), date.getMonth() + 1, date.getDate());
+	updateTime(date.getHours(), date.getMinutes(), date.getSeconds(), parseInt(date.getMilliseconds() / 100));
+ 
+};
+setInterval("update()",100);
+ 
+</script></table></center>
+<br/><center><table style="width: 450.0px;border-width: 2px;border-style: solid;border-color: #000000;background-color:rgba(135,206,250,0.65)"><td align="center" valign="top">
+<p style="text-align: center"><font size="4px">シンデレラケージ ~ Kagome-Kagome</font></p>
+<p style="text-align: center"><audio src="https://upload.thwiki.cc/9/93/th08_11.mp3" loop="" controls="" preload="none">您的浏览器不支持 audio 标签！</audio></table></center>
+<br/><center><table style="width: 450.0px;border-width: 2px;border-style: solid;border-color: #000000;background-color:rgba(135,206,250,0.65)"><td align="center" valign="top">
+<p style="text-align: center"><font size="4px">千年幻想郷 ~ History Of the Moon</font></p>
+<p style="text-align: center"><audio src="https://upload.thwiki.cc/e/e3/th08_14.mp3" loop="" controls="" preload="none">您的浏览器不支持 audio 标签！</audio></table></center>
+<br/><center><table style="width: 450.0px;border-width: 2px;border-style: solid;border-color: #000000;background-color:rgba(135,206,250,0.65)"><td align="center" valign="top">
+<p style="text-align: center"><font size="4px">ヴォヤージュ1969</font></p>
+<p style="text-align: center"><audio src="https://upload.thwiki.cc/2/2d/th08_13.mp3" loop="" controls="" preload="none">您的浏览器不支持 audio 标签！</audio></table></center>
+<br/><center><table style="width: 450.0px;border-width: 2px;border-style: solid;border-color: #000000;background-color:rgba(135,206,250,0.65)"><td align="center" valign="top">
+<p style="text-align: center"><font size="4px">プレインエイジア</font></p>
+<p style="text-align: center"><audio src="https://upload.thwiki.cc/e/e4/th08_07.mp3" loop="" controls="" preload="none">您的浏览器不支持 audio 标签！</audio></table></center>
+<br/><center><table style="width: 450.0px;border-width: 2px;border-style: solid;border-color: #000000;background-color:rgba(135,206,250,0.65)"><td align="center" valign="top">
+<p style="text-align: center"><font size="4px">東方不安種 ~ Extinction Escaped</font></p>
+<p style="text-align: center"><audio src="http://cdn-xphoto2.xiaoniangao.cn/3131262732?OSSAccessKeyId=LTAIajMJyFuun0yZ&Expires=1588262405&Signature=0SBQ5xSEBipbrKArYi3ybVc2BCA%3D" loop="" controls="" preload="none">您的浏览器不支持 audio 标签！</audio></table></center>
+<br/><center><table style="width: 450.0px;border-width: 2px;border-style: solid;border-color: #000000;background-color:rgba(135,206,250,0.65)"><td align="center" valign="top">
+<p style="text-align: center"><font size="4px">愛の河 ~ Shadow in Love River</font></p>
+<p style="text-align: center"><audio src="http://cdn-xphoto2.xiaoniangao.cn/3131263191?OSSAccessKeyId=LTAIajMJyFuun0yZ&Expires=1588262405&Signature=9InArUt6QNRwjakjBb3dq6U%2F6UI%3D" loop="" controls="" preload="none">您的浏览器不支持 audio 标签！</audio></table></center>
+<br/><center><table style="width: 450.0px;border-width: 2px;border-style: solid;border-color: #000000;background-color:rgba(135,206,250,0.65)"><td align="center" valign="top">
+<p style="text-align: center"><font size="4px">ポップチーム叙事詩物語 ~ January King</font></p>
+<p style="text-align: center"><audio src="https://file.cdn.xiaoxiaoqiandao.com/xcx/2020-04-06/5ee9c04b43fd4ff1a74cbedb96d9afaf.mp3" loop="" controls="" preload="none">您的浏览器不支持 audio 标签！</audio></table></center>
+<br/><center><table style="width: 450.0px;border-width: 2px;border-style: solid;border-color: #000000;background-color:rgba(135,206,250,0.65)"><td align="center" valign="top">
+<p style="text-align: center"><font size="4px">嘲りの輪舞曲 ～ Sneer Of Woods</font></p>
+<p style="text-align: center"><audio src="http://cdn-xphoto2.xiaoniangao.cn/3131658510?OSSAccessKeyId=LTAIajMJyFuun0yZ&Expires=1588262405&Signature=RTIycajBO5jYQYVy0%2BZKViyOrto%3D" loop="" controls="" preload="none">您的浏览器不支持 audio 标签！</audio></table></center>
+<br/><center><table style="width: 450.0px;border-width: 2px;border-style: solid;border-color: #000000;background-color:rgba(135,206,250,0.65)"><td align="center" valign="top">
+<p style="text-align: center"><font size="4px">スカイルーイン</font></p>
+<p style="text-align: center"><audio src="http://cdn-xphoto2.xiaoniangao.cn/3131650998?OSSAccessKeyId=LTAIajMJyFuun0yZ&Expires=1588262405&Signature=Rhiia1yQi4qg5gk%2FJQ%2F3AW76ptQ%3D" loop="" controls="" preload="none">您的浏览器不支持 audio 标签！</audio></table></center>
+<br/><center><table style="width: 450.0px;border-width: 2px;border-style: solid;border-color: #000000;background-color:rgba(135,206,250,0.65)"><td align="center" valign="top">
+<p style="text-align: center"><font size="4px">春の湊に</font></p>
+<p style="text-align: center"><audio src="http://cdn-xphoto2.xiaoniangao.cn/3131650917?OSSAccessKeyId=LTAIajMJyFuun0yZ&Expires=1588262405&Signature=He3TOB28faFEJ0fPg154DVcBAOM%3D" loop="" controls="" preload="none">您的浏览器不支持 audio 标签！</audio></table></center>
+<br/><center><table style="width: 450.0px;border-width: 2px;border-style: solid;border-color: #000000;background-color:rgba(135,206,250,0.65)"><td align="center" valign="top">
+<p style="text-align: center"><font size="4px">幽霊客船の時空を越えた旅</font></p>
+<p style="text-align: center"><audio src="http://cdn-xphoto2.xiaoniangao.cn/3131650851?OSSAccessKeyId=LTAIajMJyFuun0yZ&Expires=1588262405&Signature=ICXmlrnY8JwcYYivPyQ3xupRk5E%3D" loop="" controls="" preload="none">您的浏览器不支持 audio 标签！</audio></table></center>
+<br/><center><table style="width: 450.0px;border-width: 2px;border-style: solid;border-color: #000000;background-color:rgba(135,206,250,0.65)"><td align="center" valign="top">
+<p style="text-align: center"><font size="4px">デザイアドライブ</font></p>
+<p style="text-align: center"><audio src="http://cdn-xphoto2.xiaoniangao.cn/3131650763?OSSAccessKeyId=LTAIajMJyFuun0yZ&Expires=1588262405&Signature=91tDsdQRTA7OLyBrT0KCtWNgTZk%3D" loop="" controls="" preload="none">您的浏览器不支持 audio 标签！</audio></table></center>
+<br/><center><table style="width: 450.0px;border-width: 2px;border-style: solid;border-color: #000000;background-color:rgba(135,206,250,0.65)"><td align="center" valign="top">
+<p style="text-align: center"><font size="4px">死霊の夜桜</font></p>
+<p style="text-align: center"><audio src="http://cdn-xphoto2.xiaoniangao.cn/3131650681?OSSAccessKeyId=LTAIajMJyFuun0yZ&Expires=1588262405&Signature=shq1VAJjc6ONDhhuYmIUmHL0gog%3D" loop="" controls="" preload="none">您的浏览器不支持 audio 标签！</audio></table></center>
+<br/><center><table style="width: 450.0px;border-width: 2px;border-style: solid;border-color: #000000;background-color:rgba(135,206,250,0.65)"><td align="center" valign="top">
+<p style="text-align: center"><font size="4px">ビーストメトロポリス</font></p>
+<p style="text-align: center"><audio src="http://cdn-xphoto2.xiaoniangao.cn/3131650580?OSSAccessKeyId=LTAIajMJyFuun0yZ&Expires=1588262405&Signature=QWJi5cuyGx2%2BR2pR6rsQl%2FZgQzg%3D" loop="" controls="" preload="none">您的浏览器不支持 audio 标签！</audio></table></center>
+<br/><center><table style="width: 450.0px;border-width: 2px;border-style: solid;border-color: #000000;background-color:rgba(135,206,250,0.65)"><td align="center" valign="top">
+<p style="text-align: center"><font size="4px">向こう側の月</font></p>
+<p style="text-align: center"><audio src="http://cdn-xphoto2.xiaoniangao.cn/3131650486?OSSAccessKeyId=LTAIajMJyFuun0yZ&Expires=1588262405&Signature=BFv%2BHSOWGX3hhqZzt%2FjEyOPq20A%3D" loop="" controls="" preload="none">您的浏览器不支持 audio 标签！</audio></table></center>
+<br/><center><table style="width: 450.0px;border-width: 2px;border-style: solid;border-color: #000000;background-color:rgba(135,206,250,0.65)"><td align="center" valign="top">
+<p style="text-align: center"><font size="4px">遠野幻想物語</font></p>
+<p style="text-align: center"><audio src="http://cdn-xphoto2.xiaoniangao.cn/3131684817?OSSAccessKeyId=LTAIajMJyFuun0yZ&Expires=1588262405&Signature=Sgxy4z7gAmnkXSvd%2BWqEVleNb0A%3D" loop="" controls="" preload="none">您的浏览器不支持 audio 标签！</audio></table></center>
+<br/><center><table style="width: 450.0px;border-width: 2px;border-style: solid;border-color: #000000;background-color:rgba(135,206,250,0.65)"><td align="center" valign="top">
+<p style="text-align: center"><font size="4px">上海紅茶館 ～ Chinese Tea</font></p>
+<p style="text-align: center"><audio src="http://cdn-xphoto2.xiaoniangao.cn/3131684990?OSSAccessKeyId=LTAIajMJyFuun0yZ&Expires=1588262405&Signature=Cp%2BgZeANCHvdAIX%2B1XP%2F8yQdSB0%3D" loop="" controls="" preload="none">您的浏览器不支持 audio 标签！</audio></table></center>
+<br/><center><table style="width: 450.0px;border-width: 2px;border-style: solid;border-color: #000000;background-color:rgba(135,206,250,0.65)"><td align="center" valign="top">
+<p style="text-align: center"><font size="4px">砕月</font></p>
+<p style="text-align: center"><audio src="http://cdn-xphoto2.xiaoniangao.cn/3131684720?OSSAccessKeyId=LTAIajMJyFuun0yZ&Expires=1588262405&Signature=DO3GT89AKWeThub4OgNyHnNsg3Y%3D" loop="" controls="" preload="none">您的浏览器不支持 audio 标签！</audio></table></center>
+<br/><center><table style="width: 450.0px;border-width: 2px;border-style: solid;border-color: #000000;background-color:rgba(135,206,250,0.65)"><td align="center" valign="top">
+<p style="text-align: center"><font size="4px">東の国の眠らない夜</font></p>
+<p style="text-align: center"><audio src="http://cdn-xphoto2.xiaoniangao.cn/3131684630?OSSAccessKeyId=LTAIajMJyFuun0yZ&Expires=1588262405&Signature=UJqbitoMKpxTpqmhsWQejH4dQJs%3D" loop="" controls="" preload="none">您的浏览器不支持 audio 标签！</audio></table></center>
+<br/><center><table style="width: 450.0px;border-width: 2px;border-style: solid;border-color: #000000;background-color:rgba(135,206,250,0.65)"><td align="center" valign="top">
+<p style="text-align: center"><font size="4px">廃獄ララバイ</font></p>
+<p style="text-align: center"><audio src="http://cdn-xphoto2.xiaoniangao.cn/3131684527?OSSAccessKeyId=LTAIajMJyFuun0yZ&Expires=1588262405&Signature=BejbZjtzNJaDu%2BcaaWR%2B%2FnMSkVM%3D" loop="" controls="" preload="none">您的浏览器不支持 audio 标签！</audio></table></center>
+<br/><center><table style="width: 450.0px;border-width: 2px;border-style: solid;border-color: #000000;background-color:rgba(135,206,250,0.65)"><td align="center" valign="top">
+<p style="text-align: center"><font size="4px">真夜中のフェアリーダンス</font></p>
+<p style="text-align: center"><audio src="http://cdn-xphoto2.xiaoniangao.cn/3131684434?OSSAccessKeyId=LTAIajMJyFuun0yZ&Expires=1588262405&Signature=o0CFejYBh9GbG0FFKQPhkLV68bA%3D" loop="" controls="" preload="none">您的浏览器不支持 audio 标签！</audio></table></center>
+<br/><center><table style="width: 450.0px;border-width: 2px;border-style: solid;border-color: #000000;background-color:rgba(135,206,250,0.65)"><td align="center" valign="top">
+<p style="text-align: center"><font size="4px">秘匿されたフォーシーズンズ</font></p>
+<p style="text-align: center"><audio src="http://cdn-xphoto2.xiaoniangao.cn/3131684341?OSSAccessKeyId=LTAIajMJyFuun0yZ&Expires=1588262405&Signature=Bl8lxDe8Oq9D6SScDlA%2BOL8YeTo%3D" loop="" controls="" preload="none">您的浏览器不支持 audio 标签！</audio></table></center>
+<br/><center><table style="width: 450.0px;border-width: 2px;border-style: solid;border-color: #000000;background-color:rgba(135,206,250,0.65)"><td align="center" valign="top">
+<p style="text-align: center"><font size="4px">セラミックスの杖刀人</font></p>
+<p style="text-align: center"><audio src="http://cdn-xphoto2.xiaoniangao.cn/3131684217?OSSAccessKeyId=LTAIajMJyFuun0yZ&Expires=1588262405&Signature=PuXcT2n9w9jLuGxU8W1fbLnkysE%3D" loop="" controls="" preload="none">您的浏览器不支持 audio 标签！</audio></table></center>
+<br/><center><table style="width: 450.0px;border-width: 2px;border-style: solid;border-color: #000000;background-color:rgba(135,206,250,0.65)"><td align="center" valign="top">
+<p style="text-align: center"><font size="4px">さくらさくら ～ Japanize Dream</font></p>
+<p style="text-align: center"><audio src="http://cdn-xphoto2.xiaoniangao.cn/3131684888?OSSAccessKeyId=LTAIajMJyFuun0yZ&Expires=1588262405&Signature=q0S8w3Or8X%2Bz9H%2FOYa8551DQkd8%3D" loop="" controls="" preload="none">您的浏览器不支持 audio 标签！</audio></table></center>
+<br/><center><table style="width: 450.0px;border-width: 2px;border-style: solid;border-color: #000000;background-color:rgba(135,206,250,0.65)"><td align="center" valign="top">
+<a href="http://deemomisaka.github.io/"><button><font size="6px">返回主站</font></button></a></table></center>
+<br/>
+<center><table style="width: 450.0px;border-width: 2px;border-style: solid;border-color: #000000;background-color:rgba(135,206,250,0.65)"><td align="center" valign="top">
+<a href="https://deemomisaka.github.io/music/"><strong><button><font size="6px">返回音乐室</font></button></strong></a></table></center>
+<br/>
+<center><table style="width: 450.0px;border-width: 2px;border-style: solid;border-color: #000000;background-color:rgba(135,206,250,0.65)"><td align="center" valign="top"><a href="#top" target="_self"><button><font size="6px">返回顶部</font></button></a></table></center>
+<br/>
+<center><table style="width: 450.0px;border-width: 2px;border-style: solid;border-color: #000000;background-color:rgba(135,206,250,0.65)"><td align="center" valign="top">
+<p style="text-align: center"><font size="4px"color="black">DeemoMisaka ©2017-2020 All Rights Deserved.</font></table></center>
+</body>
+</html>

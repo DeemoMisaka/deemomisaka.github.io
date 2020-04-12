@@ -1,0 +1,202 @@
+﻿<!DOCTYPE HTML>
+<html lang=en">
+<head>
+  <meta charset="ANSI">
+  <title>PVZ ~ Touhou Arranged</title>
+  <link rel="icon" href="https://deemomisaka.github.io/favicon.ico" type="image/x-icon">
+  <body bgcolor="#87CEFA">
+</head>
+<body>
+<hr />
+<p style="text-align: center"><font size="6.8"><strong>Plants VS Zombies（Touhou Arranged By Deftera Getsuyo）</strong></font></p>
+<p style="text-align: center">（<a href="http://i.xiaoniangao.cn/">小年糕有声影集</a>提供外链支持）</p>
+<hr />
+<div style="margin:0 auto; text-align:center">
+	<div style="font-size:25px; color: blue;" id="date">
+		<span id="year">2017</span>-<span id="month">01</span>-<span id="day">01</span>
+	</div>
+ 
+	<div style="font-size:40px; color: black;" id="time">
+		<span id="h">12</span>:<span id="m">00</span>:<span id="s">00</span>
+	</div>
+</div>
+<script>
+
+var bfullscreen = false;
+function fullscreen() {
+	//document.documentElement.webkitRequestFullScreen();
+	//var docElm = document.documentElement;
+	//console.log(docElm)
+	if (!bfullscreen) {
+		if (document.requestFullscreen) { // w3c
+			document.requestFullscreen();
+		} else if (document.mozRequestFullScreen) { // FireFox
+			document.mozRequestFullScreen();
+		} else if (document.webkitRequestFullScreen) { // chrome
+			document.webkitRequestFullScreen();  
+		} else if (document.msRequestFullscreen) { // IE11
+			document.msRequestFullscreen();
+		}
+		bfullscreen = true;
+	} else {
+		if (document.exitFullscreen) {
+		    document.exitFullscreen();
+		} else if (document.mozCancelFullScreen) {
+		    document.mozCancelFullScreen();
+		} else if (document.webkitCancelFullScreen) {
+		    document.webkitCancelFullScreen();
+		} else if (document.msExitFullscreen) {
+		      document.msExitFullscreen();
+		}
+		bfullscreen = false;
+	}
+}
+function fontsizereset() {
+	var ed = document.getElementById("date");
+	var et = document.getElementById("time");
+	ed.style.fontSize = "48px";
+	et.style.fontSize = "160px";
+}
+function fontsizeup() {
+	var ed = document.getElementById("date");
+	var et = document.getElementById("time");
+	var vd = ed.style.fontSize;
+	var vt = et.style.fontSize;
+	vd = parseInt(vd.substring(0, vd.length - 2)) + 16;
+	vt = parseInt(vt.substring(0, vt.length - 2)) + 24;
+	if (vd > 240)
+		vd = 240;
+	if (vt > 360)
+		vt = 360;
+	ed.style.fontSize = vd + "px";
+	et.style.fontSize = vt + "px";
+}
+function fontsizedown() {
+	var ed = document.getElementById("date");
+	var et = document.getElementById("time");
+	var vd = ed.style.fontSize;
+	var vt = et.style.fontSize;
+	vd = parseInt(vd.substring(0, vd.length - 2)) - 20;
+	vt = parseInt(vt.substring(0, vt.length - 2)) - 20;
+	if (vd < 12)
+		vd = 12;
+	if (vt < 16)
+		vt = 16;
+	ed.style.fontSize = vd + "px";
+	et.style.fontSize = vt + "px";
+}
+ 
+// -------------------------------
+function updateDate(y, m, d) {
+	if (m < 10)
+		m = "0" + m;
+	if (d < 10)
+		d = "0" + d;
+	document.getElementById("year").innerHTML = y;
+	document.getElementById("month").innerHTML = m;
+	document.getElementById("day").innerHTML = d;
+}
+ 
+function updateTime(h, m, s, sss) {
+	if (h < 10)
+		h = "0" + h;
+	if (m < 10)
+		m = "0" + m;
+	if (s < 10)
+		s = "0" + s;
+	document.getElementById("h").innerHTML = h;
+	document.getElementById("m").innerHTML = m;
+	document.getElementById("s").innerHTML = s;
+	document.getElementById("sss").innerHTML = sss;
+}
+ 
+function update(){
+	var date = new Date();
+	updateDate(date.getFullYear(), date.getMonth() + 1, date.getDate());
+	updateTime(date.getHours(), date.getMinutes(), date.getSeconds(), parseInt(date.getMilliseconds() / 100));
+ 
+};
+setInterval("update()",100);
+ 
+</script>
+<hr />
+<p style="text-align: center"><font size="4px">1.Crazy Dave</font></p>
+<p style="text-align: center"><audio src="http://cdn-xphoto2.xiaoniangao.cn/3136465319?OSSAccessKeyId=LTAIajMJyFuun0yZ&amp;Expires=1588262405&amp;Signature=R2YvVtUyuAD2ct9TFFql1T4iUd4%3D" loop="" controls="" preload="none">您的浏览器不支持 audio 标签！</audio>
+<hr />
+<p style="text-align: center"><font size="4px">2.Choose Your Seeds</font></p>
+<p style="text-align: center"><audio src="http://cdn-xphoto2.xiaoniangao.cn/3136465401?OSSAccessKeyId=LTAIajMJyFuun0yZ&Expires=1588262405&Signature=gh8526RGIohPV0HxeOlnU%2BkBZs8%3D" loop="" controls="" preload="none">您的浏览器不支持 audio 标签！</audio>
+<hr />
+<p style="text-align: center"><font size="4px">3.Grasswalk</font></p>
+<p style="text-align: center"><audio src="http://cdn-xphoto2.xiaoniangao.cn/3136465552?OSSAccessKeyId=LTAIajMJyFuun0yZ&Expires=1588262405&Signature=PR5j9a%2F%2Bd3lqveB8BYWtADien94%3D" loop="" controls="" preload="none">您的浏览器不支持 audio 标签！</audio>
+<hr />
+<p style="text-align: center"><font size="4px">4.Loonboon</font></p>
+<p style="text-align: center"><audio src="http://cdn-xphoto2.xiaoniangao.cn/3136465700?OSSAccessKeyId=LTAIajMJyFuun0yZ&Expires=1588262405&Signature=Y%2FfmxuZ3IU65T2binHlfUvcksUE%3D" loop="" controls="" preload="none">您的浏览器不支持 audio 标签！</audio>
+<hr />
+<p style="text-align: center"><font size="4px">5.Moongrains</font></p>
+<p style="text-align: center"><audio src="http://cdn-xphoto2.xiaoniangao.cn/3136465841?OSSAccessKeyId=LTAIajMJyFuun0yZ&Expires=1588262405&Signature=jGAchwHcP9lxgvHBTZMVFRgoqhM%3D" loop="" controls="" preload="none">您的浏览器不支持 audio 标签！</audio>
+<hr />
+<p style="text-align: center"><font size="4px">6.Zen Garden</font></p>
+<p style="text-align: center"><audio src="http://cdn-xphoto2.xiaoniangao.cn/3136465998?OSSAccessKeyId=LTAIajMJyFuun0yZ&Expires=1588262405&Signature=wyr7up9wi76VsWv2kk4kKl796Rw%3D" loop="" controls="" preload="none">您的浏览器不支持 audio 标签！</audio>
+<hr />
+<p style="text-align: center"><font size="4px">7.Watery Graves</font></p>
+<p style="text-align: center"><audio src="http://cdn-xphoto2.xiaoniangao.cn/3136466135?OSSAccessKeyId=LTAIajMJyFuun0yZ&Expires=1588262405&Signature=87Dv7ZURWKY%2FHpTnmyrrTWBL5Ag%3D" loop="" controls="" preload="none">您的浏览器不支持 audio 标签！</audio>
+<hr />
+<p style="text-align: center"><font size="4px">8.Ultimate Battle</font></p>
+<p style="text-align: center"><audio src="http://cdn-xphoto2.xiaoniangao.cn/3136466254?OSSAccessKeyId=LTAIajMJyFuun0yZ&Expires=1588262405&Signature=2MyAVb6bqsMorqBYLZJWCkt5NdI%3D" loop="" controls="" preload="none">您的浏览器不支持 audio 标签！</audio>
+<hr />
+<p style="text-align: center"><font size="4px">9.Rigor Mormist</font></p>
+<p style="text-align: center"><audio src="http://cdn-xphoto2.xiaoniangao.cn/3136466415?OSSAccessKeyId=LTAIajMJyFuun0yZ&Expires=1588262405&Signature=VU8BsJk%2BlBeGx%2BiLg%2F6iNiIf7ag%3D" loop="" controls="" preload="none">您的浏览器不支持 audio 标签！</audio>
+<hr />
+<p style="text-align: center"><font size="4px">10.Cerebrawl</font></p>
+<p style="text-align: center"><audio src="http://cdn-xphoto2.xiaoniangao.cn/3136466553?OSSAccessKeyId=LTAIajMJyFuun0yZ&Expires=1588262405&Signature=5PcEDnz2B4xQgmEP0k6lI32d%2BdU%3D" loop="" controls="" preload="none">您的浏览器不支持 audio 标签！</audio>
+<hr />
+<p style="text-align: center"><font size="4px">11.Graze the Roof</font></p>
+<p style="text-align: center"><audio src="http://cdn-xphoto2.xiaoniangao.cn/3136466694?OSSAccessKeyId=LTAIajMJyFuun0yZ&Expires=1588262405&Signature=T6je3yJNtTsQUbbSgkk5K%2BSj7FU%3D" loop="" controls="" preload="none">您的浏览器不支持 audio 标签！</audio>
+<hr />
+<p style="text-align: center"><font size="4px">12.Brainiac Maniac</font></p>
+<p style="text-align: center"><audio src="http://cdn-xphoto2.xiaoniangao.cn/3136466846?OSSAccessKeyId=LTAIajMJyFuun0yZ&Expires=1588262405&Signature=fMlOvALayuWG08nZSVe%2Ba4Fht2Y%3D" loop="" controls="" preload="none">您的浏览器不支持 audio 标签！</audio>
+<hr />
+<p style="text-align: center"><font size="4px">13.Zombies on Your Lawn</font></p>
+<p style="text-align: center"><audio src="http://cdn-xphoto2.xiaoniangao.cn/3136467015?OSSAccessKeyId=LTAIajMJyFuun0yZ&Expires=1588262405&Signature=UVNcpzSgGRabRfJMY1FbLGJOWbo%3D" loop="" controls="" preload="none">您的浏览器不支持 audio 标签！</audio>
+<hr />
+<p style="text-align: center"><font size="4px">14a.Zombotany</font></p>
+<p style="text-align: center"><audio src="http://cdn-xphoto2.xiaoniangao.cn/3136467167?OSSAccessKeyId=LTAIajMJyFuun0yZ&Expires=1588262405&Signature=Tf%2Bj2%2B7cTFz%2B47G1lBEd1DUPJWw%3D" loop="" controls="" preload="none">您的浏览器不支持 audio 标签！</audio>
+<hr />
+<p style="text-align: center"><font size="4px">14b.Zombotany - Spirit Trance</font></p>
+<p style="text-align: center"><audio src="http://cdn-xphoto2.xiaoniangao.cn/3136467284?OSSAccessKeyId=LTAIajMJyFuun0yZ&Expires=1588262405&Signature=cO6VUSe2WpxDcZAIp%2FERprjIu7c%3D" loop="" controls="" preload="none">您的浏览器不支持 audio 标签！</audio>
+<hr />
+<p style="text-align: center"><span id="momk"></span><span id="momk" style="color: #ff0000;"></span>
+<script type="text/javascript">
+function NewDate(str) {
+str = str.split('-');
+var date = new Date();
+date.setUTCFullYear(str[0], str[1] - 1, str[2]);
+date.setUTCHours(0, 0, 0, 0);
+return date;
+}
+function momxc() {
+var birthDay =NewDate("2020-4-9");
+var today=new Date();
+var timeold=today.getTime()-birthDay.getTime();
+var sectimeold=timeold/1000
+var secondsold=Math.floor(sectimeold);
+var msPerDay=24*60*60*1000; var e_daysold=timeold/msPerDay;
+var daysold=Math.floor(e_daysold);
+var e_hrsold=(daysold-e_daysold)*-24;
+var hrsold=Math.floor(e_hrsold);
+var e_minsold=(hrsold-e_hrsold)*-60;
+var minsold=Math.floor((hrsold-e_hrsold)*-60); var seconds=Math.floor((minsold-e_minsold)*-60).toString();
+document.getElementById("momk").innerHTML = "本站已安全稳定運行"+daysold+"天"+hrsold+"小時"+minsold+"分"+seconds+"秒";
+setTimeout(momxc, 1000);
+}momxc();
+</script>  <style>
+#momk{animation:change 10s infinite;font-weight:800; }
+@keyframes change{0% {color:#FFFFFF;}50% {color:#000000;}100% {color:#FFFFFF;}}
+</style>
+<hr />
+<p style="text-align: center"><a href="https://deemomisaka.github.io/music/"><button><font size="6px">返回音乐室主页</font></button></a>
+<p style="text-align: center"><a href="https://deemomisaka.github.io/"><button><font size="6px">返回主站</font></button></a>
+<hr />
+<p style="text-align: center"><font size="4px"color="black">DeemoMisaka ©2017-2020 All Rights Deserved.</font><br />
+</body>
+</html>
