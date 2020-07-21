@@ -28,38 +28,6 @@ var _hmt = _hmt || [];
         document.write('<style>body{background:url(' + bodyBgs[randomBgIndex] + ');background-position: center;background-attachment: fixed;background-size:contain;background-repeat: no-repeat;">}</style>');
     //]]>
 </script>
-<script type="text/javascript">
-/* 鼠标特效 */
-var a_idx = 0;
-jQuery(document).ready(function($) {
-    $("body").click(function(e) {
-        var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正" ,"法治", "爱国", "敬业", "诚信", "友善");
-        var $i = $("<span />").text(a[a_idx]);
-        a_idx = (a_idx + 1) % a.length;
-        var x = e.pageX,
-        y = e.pageY;
-        $i.css({
-            "z-index": 999999999999999999999999999999999999999999999999999999999999999999999,
-            "top": y - 20,
-            "left": x,
-            "position": "absolute",
-            "font-weight": "bold",
-            "color": "#fa2a2a"
-        });
-        $("body").append($i);
-        $i.animate({
-            "top": y - 180,
-            "opacity": 0
-        },
-        1500,
-        function() {
-            $i.remove();
-        });
-    });
-});
-</script>
-
-<script type="text/javascript" src="http://www.dayanzai.me/wp-content/themes/dayanzai/js/functions.js"></script> 
 <center><table style="width: 950.0px;border-width: 2px;border-style: solid;border-color: #000000;background-color:rgba(135,206,250,0.8)"><td align="center" valign="top">
 <div class="wrapper">
         <div class="col-sm-12 col-md-8 col-lg-6 center-block" style="float: none;">
