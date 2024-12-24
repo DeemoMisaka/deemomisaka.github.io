@@ -5,11 +5,16 @@
   <title>DeemoMisaka</title>
   <link rel="icon" href="https://deemomisaka.github.io/favicon.ico" type="image/x-icon">
 </head>
-<body>
-	body{
-    background-image: url('Touhou%20Eiyashou%20Stage%206-2.png');
-}
-</body>
+<script type="text/javascript">
+    //<!CDATA[
+        var bodyBgs = [];
+        bodyBgs[0] = "https://deemomisaka.github.io/Touhou%20Eiyashou%20Stage%206-2.png";
+        bodyBgs[1] = "https://images2.alphacoders.com/742/thumb-1920-742309.png";
+         var randomBgIndex = Math.round( Math.random() * 1 );
+    //输出随机的背景图
+        document.write('<style>body{background:url(' + bodyBgs[randomBgIndex] + ');background-position: center;background-attachment: fixed;background-size:contain;background-repeat: no-repeat;">}</style>');
+    //]]>
+</script>
 <center><table style="width: 950.0px;border-width: 2px;border-style: solid;border-color: #000000;background-color:rgba(135,206,250,0.8)"><td align="center" valign="top">
 <div class="wrapper">
         <div class="col-sm-12 col-md-8 col-lg-6 center-block" style="float: none;">
